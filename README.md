@@ -1,4 +1,4 @@
-# vue-exercise5
+# vue-portfolio
 
 ## Project setup
 ```
