@@ -50,9 +50,8 @@ export default {
     object-fit: cover;
 }
 .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 </style>
 

@@ -1,57 +1,31 @@
 <template>
-  <div class="gridContainer">
+  <nav>
     
-    <router-view/>
-    <Navbar/>
-  </div>
+    | <router-link to="/products">Products</router-link> |
+  
+  </nav>
+  <router-view/>
 </template>
 
-<script>
-
-import Navbar from '@/components/Navbar.vue'
-import FooterView from '@/components/Footer.vue'
-
-export default {
-  components: {
-    Navbar,
-    FooterView
-  }
-}
-</script>
-
 <style>
-
-.gridContainer{
-  display: grid;
-  grid-template-columns: 7fr 1fr;
-  grid-template-rows: 1fr;
-  min-height: 100vh;
-
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 
-@media screen and (max-width: 760px){
-  .gridContainer{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-
-  .nav-background{
-    display: none !important;
-  }
-  .navMobile{
-    display: block !important;
-  }
+nav {
+  padding: 30px;
 }
 
-*{
-  text-decoration: none;
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
 
-@media screen and (max-width: 760px){
-  Footer{
-    width: 100% !important;
-  }
+nav a.router-link-exact-active {
+  color: #42b983;
 }
-
 </style>
